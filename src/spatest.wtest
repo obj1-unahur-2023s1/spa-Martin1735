@@ -1,0 +1,13 @@
+import spa.*
+import personas.*
+test "testX" {
+	ramiro.diaDeTrabajo()
+	ramiro.jugarAlPaddle()
+	ramiro.jugarAlPaddle()
+	ramiro.jugarAlPaddle()
+	spa.atender(ramiro)
+	assert.that(spa.ultimaPersona()==ramiro)
+	spa.atender(bruno,ramiro)
+	assert.that(ramiro.nivelDeContractura()==5)
+	
+}

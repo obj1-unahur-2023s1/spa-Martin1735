@@ -1,8 +1,21 @@
 import personas.*
 
 object spa {
+	var property ultimaPersona 
+	
+	method atender(persona1,persona2) { 
+		if(ultimaPersona == persona1){
+			self.atender(persona1)
+		}
+		else {self.atender(persona2)}
+		
+	}
 	method atender(persona) {
-		// hay que hacer que la persona reciba masajes y se dé un baño de vapor
-		// despues, agregar el premio para el que vuelve enseguida
+		if(ultimaPersona == persona){
+			persona.recibirMasajes()
+			persona.darseUnBanioDeVapor()
+			persona.recibirMasajes()
+		}
+		else{persona.recibirMasajes()persona.darseUnBanioDeVapor() self.ultimaPersona(persona)}
 	}
 }
